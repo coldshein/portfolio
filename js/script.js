@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+
 
   const links = document.querySelectorAll('.link');
 links.forEach(el=>{
@@ -44,7 +44,6 @@ burger.addEventListener('click', function(){
   burger.classList.toggle('open-burger');
   burgerNav.classList.toggle('open-menu');
   
-})
 })
 
 
