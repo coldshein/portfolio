@@ -1,3 +1,11 @@
+let mask = document.querySelector('.mask');
+
+window.addEventListener('load', function(){
+  mask.classList.add("hide");
+  this.setInterval(function(){
+    mask.remove();
+  }, 600)
+})
 
   const links = document.querySelectorAll('.link');
 links.forEach(el=>{
