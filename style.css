@@ -99,6 +99,7 @@ input {
   line-height: 1.6;
   color: #25a7b1;
   font-family: "Catamaran", sans-serif;
+  opacity: 0;
 }
 
 .section_text {
@@ -113,6 +114,7 @@ input {
   font-size: 150px;
   line-height: 1;
   z-index: 0;
+  opacity: 0;
 }
 
 .mask {
@@ -189,6 +191,49 @@ input {
             transform: rotate(360deg);
   }
 }
+.observer .text_about, .observer .text_work, .observer .text_contact {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.observer .about_title {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.observer .portfolio_title {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.observer .contacts_title {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.observer .section_title {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.observer .capabilities {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  opacity: 1;
+}
+
 .home {
   width: 100%;
   background: #1D1D1D;
@@ -498,6 +543,7 @@ input {
   background: -webkit-gradient(linear, left top, right bottom, from(#1D1D1D), to(#191f1d));
   background: linear-gradient(top left, #1D1D1D 0%, #191f1d 100%);
   background: linear-gradient(to bottom right, #1D1D1D 0%, #191f1d 100%);
+  overflow: hidden;
 }
 
 .about_inner {
@@ -532,6 +578,7 @@ input {
   font-weight: 500;
   color: #fff;
   position: relative;
+  opacity: 0;
 }
 .about_title::after {
   display: block;
@@ -586,6 +633,9 @@ input {
 
 .capabilities {
   z-index: 1;
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  opacity: 0;
 }
 
 .capabilities_item {
@@ -647,6 +697,9 @@ input {
   font-family: "Roboto", sans-serif;
 }
 
+.portfolio_title {
+  opacity: 0;
+}
 .portfolio_title::before {
   display: block;
   content: "<h2>";
@@ -875,6 +928,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -927,6 +981,9 @@ input {
   position: relative;
 }
 
+.contacts_title {
+  opacity: 0;
+}
 .contacts_title::after {
   display: block;
   content: "</h2>";
