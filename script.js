@@ -53,5 +53,16 @@ VANTA.TRUNK({
   chaos: 6.00
 })
 
+// INTERSECTION OBSERVER
 
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries =>{
+  entries.forEach(entry =>{
+    entry.target.classList.toggle("observer", entry.isIntersecting);
+  })
+})
+
+sections.forEach(section =>{
+  observer.observe(section);
+})
 
