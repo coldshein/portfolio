@@ -1,6 +1,7 @@
 let mask = document.querySelector('.mask');
 
 window.addEventListener('load', function(){
+  this.window.scrollTo(0,0);
   mask.classList.add("hide");
   this.setInterval(function(){
     mask.remove();
@@ -58,7 +59,12 @@ VANTA.TRUNK({
 const sections = document.querySelectorAll("section");
 const observer = new IntersectionObserver(entries =>{
   entries.forEach(entry =>{
-    entry.target.classList.toggle("observer", entry.isIntersecting);
+    if(entry.isIntersecting){
+      entry.target.classList.toggle("observer", entry.isIntersecting);
+      observer.unobserve(entry.target);
+    }
+    
+    
   })
 })
 
