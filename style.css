@@ -96,7 +96,7 @@ input {
 
 .section_title {
   font-size: 70px;
-  line-height: 1.6;
+  line-height: 1.2;
   color: #25a7b1;
   font-family: "Catamaran", sans-serif;
   opacity: 0;
@@ -115,6 +115,10 @@ input {
   line-height: 1;
   z-index: 0;
   opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .mask {
@@ -214,8 +218,8 @@ input {
 }
 .observer .home_subtitle {
   opacity: 1;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
   -webkit-transition-delay: 1.4s;
           transition-delay: 1.4s;
 }
@@ -305,6 +309,111 @@ input {
   transition: 1s ease-in-out;
   -webkit-transition-delay: 1.2s;
           transition-delay: 1.2s;
+}
+.observer .form {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.observer .form .input-container {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+}
+.observer .form .input-container:nth-child(1) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.observer .form .input-container:nth-child(2) {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+.observer .form .input-container:nth-child(3) {
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+.observer #post-save {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
+}
+
+.html_tag {
+  margin: 10px 0;
+  position: absolute;
+  z-index: 10;
+  top: 1%;
+  left: 8%;
+}
+.html_tag::before {
+  display: block;
+  content: "<html>";
+  text-align: left;
+  margin-left: "0px";
+  font-size: 16px;
+  line-height: 20px;
+  text-shadow: 0 0 5px white;
+  font-family: "Kalam", sans-serif;
+  opacity: 0.5;
+}
+
+.body_tag {
+  margin: 10px 0;
+  position: absolute;
+  z-index: 10;
+  top: 2%;
+  left: 10%;
+}
+.body_tag::before {
+  display: block;
+  content: "<body>";
+  text-align: left;
+  margin-left: "0px";
+  font-size: 16px;
+  line-height: 20px;
+  text-shadow: 0 0 5px white;
+  font-family: "Kalam", sans-serif;
+  opacity: 0.5;
+}
+
+.body_closing_tag {
+  margin: 10px 0;
+  margin-left: 10%;
+}
+.body_closing_tag::after {
+  display: block;
+  content: "</body>";
+  text-align: left;
+  margin-left: "100px";
+  font-size: 16px;
+  line-height: 20px;
+  text-shadow: 0 0 5px white;
+  font-family: "Kalam", sans-serif;
+  opacity: 0.5;
+}
+
+.html_closing_tag {
+  margin: 10px 0;
+  margin-left: 8%;
+}
+.html_closing_tag::after {
+  display: block;
+  content: "</html>";
+  text-align: left;
+  margin-left: "100px";
+  font-size: 16px;
+  line-height: 20px;
+  text-shadow: 0 0 5px white;
+  font-family: "Kalam", sans-serif;
+  opacity: 0.5;
 }
 
 .home {
@@ -500,7 +609,7 @@ input {
   content: "<h1>";
   text-align: left;
   margin-left: -5%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -511,7 +620,7 @@ input {
   content: "</h1>";
   text-align: left;
   margin-left: -5%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -537,7 +646,7 @@ input {
   content: "<p>";
   text-align: left;
   margin-left: -5%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -548,7 +657,7 @@ input {
   content: "</p>";
   text-align: left;
   margin-left: -5%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -620,9 +729,6 @@ input {
   height: 100vh;
   position: relative;
   background: #1D1D1D;
-  background: -webkit-gradient(linear, left top, right bottom, from(#1D1D1D), to(#191f1d));
-  background: linear-gradient(top left, #1D1D1D 0%, #191f1d 100%);
-  background: linear-gradient(to bottom right, #1D1D1D 0%, #191f1d 100%);
   overflow: hidden;
 }
 
@@ -665,7 +771,7 @@ input {
   content: "</h2>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -676,7 +782,7 @@ input {
   content: "<h2>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -693,7 +799,7 @@ input {
   content: "</p>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -704,7 +810,7 @@ input {
   content: "<p>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -784,7 +890,7 @@ input {
   content: "<h2>";
   text-align: left;
   margin-left: -1%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -795,7 +901,7 @@ input {
   content: "</h2>";
   text-align: left;
   margin-left: -1%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -810,7 +916,7 @@ input {
   content: "<p>";
   text-align: left;
   margin-left: -1%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -821,7 +927,7 @@ input {
   content: "</p>";
   text-align: left;
   margin-left: -1%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -837,7 +943,7 @@ input {
   content: '<section class = "work">';
   text-align: left;
   margin-left: 2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -848,7 +954,7 @@ input {
   content: "</section>";
   text-align: left;
   margin-left: 2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -858,15 +964,15 @@ input {
 .work {
   display: -ms-grid;
   display: grid;
-  gap: 10px;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+  gap: 5px;
+  -ms-grid-columns: 1fr 5px 1fr 5px 1fr 5px 1fr 5px 1fr;
   grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: 1fr 10px 1fr;
+  -ms-grid-rows: 1fr 5px 1fr;
   grid-template-rows: repeat(2, 1fr);
   padding: 15px 0;
   height: auto;
-  -webkit-transform: translateY(150%);
-          transform: translateY(150%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   opacity: 0;
   width: 100%;
 }
@@ -939,8 +1045,8 @@ input {
 .work_card .work_img {
   height: 100%;
   width: 100%;
-  -webkit-filter: opacity(60%);
-          filter: opacity(60%);
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
@@ -960,6 +1066,7 @@ input {
   text-transform: uppercase;
   width: 100px;
   height: 100px;
+  padding: 10px;
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
@@ -979,12 +1086,13 @@ input {
           justify-content: center;
   font-weight: 700;
   font-size: 18px;
+  line-height: 1;
   text-decoration: none;
   border: none;
   font-weight: 400;
   cursor: pointer;
-  letter-spacing: 1px;
-  color: #0a202e;
+  color: #DB1919;
+  font-family: "Catamaran", sans-serif;
 }
 .open:hover {
   color: #50c4cc;
@@ -1008,10 +1116,10 @@ input {
   }
 }
 .contacts {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1019,12 +1127,7 @@ input {
       -ms-flex-pack: center;
           justify-content: center;
   background: #1D1D1D;
-  background: -webkit-gradient(linear, left top, right bottom, from(#1D1D1D), to(#191f1d));
-  background: linear-gradient(top left, #1D1D1D 0%, #191f1d 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(100%, #1D1D1D), color-stop(0%, #293531));
-  background: linear-gradient(to bottom right, #1D1D1D 100%, #293531 0%);
   padding: 20px 0;
-  margin-top: -1px;
   position: relative;
 }
 .contacts form {
@@ -1074,7 +1177,7 @@ input {
   content: "</h2>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -1085,7 +1188,7 @@ input {
   content: "<h2>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -1094,13 +1197,14 @@ input {
 
 .form {
   margin-top: 20px;
+  opacity: 0;
 }
 .form::after {
   display: block;
   content: "</form>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
@@ -1111,11 +1215,16 @@ input {
   content: "<form>";
   text-align: left;
   margin-left: -2%;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-shadow: 0 0 5px white;
   font-family: "Kalam", sans-serif;
   opacity: 0.5;
+}
+.form .input-container {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
 }
 
 #post-name, #post-email {
@@ -1127,6 +1236,7 @@ input {
   outline: none;
   max-width: 100%;
   min-height: 300px;
+  max-height: 600px;
   margin-bottom: 10px;
   border: none;
   padding: 15px 15px 5px 20px;
@@ -1139,6 +1249,9 @@ input {
 }
 
 #post-save {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   height: 45px;
   width: 200px;
   text-transform: uppercase;
@@ -1184,17 +1297,6 @@ input {
 }
 #post-save:hover .text {
   color: #fff;
-}
-
-form .input-container:nth-child(2) .required-field {
-  right: 10%;
-}
-form .input-container:nth-child(3) .required-field {
-  right: -40%;
-}
-
-.input-container {
-  position: relative;
 }
 
 #post-name ~ .focus-border {
