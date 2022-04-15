@@ -347,9 +347,7 @@ input {
 }
 
 .html_tag {
-  margin: 10px 0;
   position: absolute;
-  z-index: 10;
   top: 1%;
   left: 8%;
 }
@@ -368,9 +366,9 @@ input {
 .body_tag {
   margin: 10px 0;
   position: absolute;
-  z-index: 10;
   top: 2%;
   left: 10%;
+  margin-top: 20px;
 }
 .body_tag::before {
   display: block;
@@ -1404,7 +1402,7 @@ input {
 }
 @media only screen and (max-width: 1150px) {
   .home_title {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
   .home_title .title {
     font-size: 82px;
